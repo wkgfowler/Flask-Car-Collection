@@ -1,0 +1,55 @@
+.ct-nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: grey;
+}
+
+.ct-nav img{
+    width: 50%;
+    max-width: 100%;
+    margin-left: 3%;
+}
+
+ul#horizontal-list{
+    min-width: 696px;
+    list-style: none;
+    padding-top: 20px;
+}
+
+ul#horizontal-list li, ul#horizontal-list a{
+    display: inline;
+    text-decoration: none;
+    padding: 0.5vw;
+    color: black;
+    font-weight: bolder;
+}
+
+ul#horizontal-list a:nth-last-child(1){
+    border: 2px solid red;
+    border-radius: 8px;
+    margin-right: 0.2vw;
+    background-color: red;
+}
+
+#header-intro{
+    background-image: url('../images/bronco.jpg');
+    background-size: cover;
+    height: 72vh;
+    color: white;
+    font-weight: 300;
+    -webkit-text-stroke: 1px black;
+}
+
+#features-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    background-color: grey;
+}
+
+#raptor-image,#escape-image,#apr-image{
+    width: 90%;
+    height: auto;
+    margin-top: 1.5vh;
+}

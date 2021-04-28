@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+    {% with messages = get_flashed_messages(with_categories = true) %}
+        {% if messages %}
+            {% for cat,msg in messages %}
+                {% if cat == 'user-created' %}
+                    <div class="alert alert-success">
+                        {{ msg }}
+                        <button type="button" class="close" data-dismiss='alert'>&times;</button>
+                    </div>
+                {% elif cat == 'auth-success' %}
+                    <div class="alert alert-sucess">
+                        {{ msg }}
+                        <button type="button" class="close" data-dismiss='alert'>&times;</button>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endwith %} 
+</div>
+<div class="container">
+    <header class="row" id="header-intro">
+        <div class="col-12 col-md-8">
+        </div>
+        <div class="col-12 col-md-4">
+            <h3>The New Year is here.</h3><br>
+            <h2>And with it, comes the all new <b>Ford Bronco!</b></h2><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <h6>Limited amount available. While supplies last. Ask an associate for more details.</h6>
+        </div>
+    </header>
+
+    <section class="row" id="features-section">
+        <div class="col-12 col-md-4">
+            <img src="../../static/images/raptor.jpg" alt="Raptor-image" id="raptor-image">
+            <h4>Brand New 2021 Vehicles</h4>
+            <p>We have a line-up featuring all the new Ford vehicles!</p>
+        </div>
+        <div class="col-12 col-md-4">
+            <img src="../../static/images/escape.jpg" alt="Escape-image" id="escape-image">
+            <h4>Guaranteed Used Cars</h4>
+            <p>If new is not for you, then we have plenty of approved used Fords on the lot!</p>
+        </div>
+        <div class="col-12 col-md-4">
+            <img src="../../static/images/apr.jpg" alt="APR-image" id="apr-image">
+            <h4>Best Financing Available</h4>
+            <p>Our in-house financers will do all they can to get you the best deal and save you the most!</p>
+        </div>
+    </section>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,1 @@
+web: gunicorn car_dealership:app --preload --timeout 60
